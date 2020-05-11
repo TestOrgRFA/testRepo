@@ -3,7 +3,7 @@ pipeline
 {
    stages
    {
-      stage('checkout'}
+      stage('checkout')
       {
          echo 'checking out repos'
          deleteDir()
