@@ -15,7 +15,7 @@ pipeline
       stage('build code')
       {
          /* groovylint-disable-next-line LineLength */
-         bat(tool(name: 'MSBuild', type: 'msbuild') "Helloworld_test/helloworld_test.vcxproj /t:build /p:Configuration:Debug;Platform:x86")
+         bat("C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe Helloworld_test\\helloworld_test.vcxproj /t:build /p:Configuration:Debug;Platform:x86")
       }
    }
 }
