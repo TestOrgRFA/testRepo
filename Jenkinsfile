@@ -1,7 +1,7 @@
 #!groovy
 pipeline
 {
-   node
+   stages
    {
       stage('checkout') {
          echo 'checking out repos'
