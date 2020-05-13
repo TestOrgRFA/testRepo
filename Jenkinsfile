@@ -1,10 +1,9 @@
 #!groovy
 pipeline
 {
-   stages
+   node
    {
-      stage('checkout')
-      {
+      stage('checkout') {
          echo 'checking out repos'
          deleteDir()
          dir('helloworld')
