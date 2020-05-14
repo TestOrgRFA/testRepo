@@ -36,6 +36,7 @@ pipeline
       {
          steps {
             /* add shell scripting here */
+            /* Choose one of the following plugin sets */
             /* Old plugin */
             step([$class: 'WarningsPublisher', 
                   canComputeNew: false, 
@@ -46,7 +47,9 @@ pipeline
                   healthy: '', 
                   includePattern: '', 
                   messagesPattern: '', 
-                  unHealthy: ''])         
+                  unHealthy: ''])
+            /* Current plugin */
+            scanForIssues(tool: [$class: 'Cmake']) //not tested - should do both warnings and TODOs? q
          }
       }
    }
