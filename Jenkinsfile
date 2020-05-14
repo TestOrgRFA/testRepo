@@ -19,7 +19,7 @@ pipeline
       {
           steps {
             /* replace with the shell scripts RFA uses */
-               bat("C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe Helloworld_test\\helloworld_test.vcxproj /t:build /p:Configuration:Debug;Platform:x86")
+               bat("C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe .\Helloworld_test\\helloworld_test.vcxproj /t:build /p:Configuration:Debug;Platform:x86")
           }
       }
 
