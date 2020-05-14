@@ -2,7 +2,6 @@
 pipeline
 {
    agent any
-
    stages
    {
       /* Check out the code from GitHub.  Just use the standard properties */
@@ -15,14 +14,6 @@ pipeline
                checkout scm
             }            
          }
-
-      stage('pre-build-tasks')
-      {
-         steps {
-            /* add shell scripting here */
-         }
-      }
-
       }
       stage('build code')
       {
