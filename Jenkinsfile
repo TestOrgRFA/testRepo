@@ -27,7 +27,7 @@ pipeline
                if(isUnix())
                {
                   //We have a unix/linux/mac machine
-                  sh "build.sh"
+                  sh "./build.sh"
                }
                else
                {
