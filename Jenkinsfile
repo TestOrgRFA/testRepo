@@ -44,7 +44,7 @@ pipeline
          steps {
             /* add shell scripting here */
             /* Current plugin */
-            recordIssues filters: [includeFile('helloworld/*.cpp'), includeFile('helloworld/*.h')], tools: [[$class: 'Cmake']] //not tested - should do both warnings and TODOs? q
+            recordIssues(tools: [[$class: 'Cmake', pattern: '**/helloworld/output_file.txt', reportEncoding: 'UTF-8'], taskScanner(highTags: 'FIXME', ignoreCase: true, lowTags: 'HACK', normalTags: 'TODO')]) //not tested - should do both warnings and TODOs?
          }
       }
    }
