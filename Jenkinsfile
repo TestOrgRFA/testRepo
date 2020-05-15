@@ -1,4 +1,7 @@
 #!groovy
+
+import org.apache.commons.lang.SystemUtils
+
 pipeline
 {
    agent any
@@ -17,28 +20,29 @@ pipeline
       }
       stage('build code')
       {
-          steps {
-            /* replace with the shell scripts RFA uses */
-               bat "build.bat"
-          }
+      steps {
+         dir('helloworld')
+         {
+            script {
+               if(isUnix())
+               {
+                  //We have a unix/linux/mac machine
+                  sh "build.sh"
+               }
+               else
+               {
+                  //We have a windows machine
+                  bat "build.bat"
+               }
+            }
+         }
+      }
       }
 
       stage('post-build-tasks')
       {
          steps {
             /* add shell scripting here */
-            /* Choose one of the following plugin sets */
-            /* Old plugin */
-            step([$class: 'WarningsPublisher', 
-                  canComputeNew: false, 
-                  canResolveRelativePaths: false, 
-                  consoleParsers: [[parserName: 'AcuCobol Compiler']], 
-                  defaultEncoding: '', 
-                  excludePattern: '', 
-                  healthy: '', 
-                  includePattern: '', 
-                  messagesPattern: '', 
-                  unHealthy: ''])
             /* Current plugin */
             scanForIssues(tool: [$class: 'Cmake']) //not tested - should do both warnings and TODOs? q
          }
