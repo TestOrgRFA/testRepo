@@ -44,7 +44,7 @@ pipeline
          steps {
             /* add shell scripting here */
             /* Current plugin */
-            recordIssues(tools: [[$class: 'Cmake'], taskScanner(highTags: 'FIXME', ignoreCase: true, lowTags: 'HACK', normalTags: 'TODO')]) //not tested - should do both warnings and TODOs?
+            recordIssues(tools: [[$class: 'Cmake'], taskScanner(highTags: 'FIXME', ignoreCase: true, includePattern: '**/*.c,**/*.h,**/*.cpp', lowTags: 'HACK', normalTags: 'TODO')]) //not tested - should do both warnings and TODOs?
          }
       }
    }
