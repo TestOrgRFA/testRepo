@@ -360,6 +360,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+# CMAKE stuff (a bit too specific)
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -373,3 +374,5 @@ CTestTestfile.cmake
 _deps
 
 output_file.txt
+
+*.swp
