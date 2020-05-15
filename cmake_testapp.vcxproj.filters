@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\onsons\Documents\GitHub\TestOrgSSOWorld\testRepo\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\onsons\Documents\GitHub\TestOrgSSOWorld\testRepo\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{667B2D43-0B49-3AD3-9108-4BD0E379A4DA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -19,7 +19,7 @@ pipeline
       {
           steps {
             /* replace with the shell scripts RFA uses */
-               bat('cmake --build build -j8')
+               bat('build.bat')
           }
       }
 
