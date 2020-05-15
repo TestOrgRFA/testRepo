@@ -44,7 +44,7 @@ pipeline
          steps {
             /* add shell scripting here */
             /* Current plugin */
-            scanForIssues(tool: [$class: 'Cmake']) //not tested - should do both warnings and TODOs? q
+            recordIssues filters: [includeFile('helloworld/*.cpp'), includeFile('helloworld/*.h')], tools: [[$class: 'Cmake']] //not tested - should do both warnings and TODOs? q
          }
       }
    }
