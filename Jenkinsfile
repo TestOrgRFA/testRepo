@@ -19,7 +19,7 @@ pipeline
       {
           steps {
             /* replace with the shell scripts RFA uses */
-               bat('build.bat')
+               bat "build.bat"
           }
       }
 
