@@ -97,7 +97,7 @@ pipeline
                                                       remoteDirectory: 'CodeDeploy', 
                                                       remoteDirectorySDF: false, 
                                                       removePrefix: 'build/Debug', 
-                                                      sourceFiles: '**/Build/Debug/*.exe']], 
+                                                      sourceFiles: '**/build/Debug/*.exe']], 
                                                       usePromotionTimestamp: false, 
                                                       useWorkspaceInPromotion: false, 
                                                       verbose: true]]
