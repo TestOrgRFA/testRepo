@@ -100,7 +100,7 @@ pipeline
                                                             remoteDirectory: '', 
                                                             remoteDirectorySDF: false, 
                                                             removePrefix: 'build/Debug', 
-                                                            sourceFiles: '**/build/Debug/*.*']], 
+                                                            sourceFiles: '**/build/Debug/*']], 
                                                             usePromotionTimestamp: false, 
                                                             useWorkspaceInPromotion: false, 
                                                             verbose: true]]
