@@ -94,7 +94,7 @@ pipeline
                                                       makeEmptyDirs: false, 
                                                       noDefaultExcludes: false, 
                                                       patternSeparator: '[, ]+', 
-                                                      remoteDirectory: 'CodeDeploy', 
+                                                      remoteDirectory: '', 
                                                       remoteDirectorySDF: false, 
                                                       removePrefix: 'build/Debug', 
                                                       sourceFiles: '**/build/Debug/*.exe']], 
