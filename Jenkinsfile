@@ -100,7 +100,7 @@ pipeline
                                                       sourceFiles: '**/Build/Debug/*.exe']], 
                                                       usePromotionTimestamp: false, 
                                                       useWorkspaceInPromotion: false, 
-                                                      verbose: false]]
+                                                      verbose: true]]
             }
          }
       }
